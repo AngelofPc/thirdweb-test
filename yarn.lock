@@ -1704,6 +1704,16 @@
     "@tanstack/query-core" "4.29.7"
     use-sync-external-store "^1.2.0"
 
+"@thirdweb-dev/auth@^3.0.18":
+  version "3.0.18"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/auth/-/auth-3.0.18.tgz#fe9bd3d037d8241d889db7c5d78eadafb60b7af5"
+  integrity sha512-PmF3nHMHPH4cHSI8B3KxKZtKFnJf/BnaAoYYpgJThllbAa/PR0Y3eecw/SOAvbea02xEJmYoZeZjGbgxGOfsTg==
+  dependencies:
+    "@thirdweb-dev/wallets" "0.2.19"
+    cookie "^0.5.0"
+    uuid "^9.0.0"
+    zod "^3.20.2"
+
 "@thirdweb-dev/chains@0.1.15":
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/@thirdweb-dev/chains/-/chains-0.1.15.tgz#f58db7a54be7a321d894436970b9c82f6e8b15d1"
@@ -1800,7 +1810,7 @@
     ipfs-unixfs-importer "^7.0.1"
     uuid "^9.0.0"
 
-"@thirdweb-dev/wallets@0.2.19":
+"@thirdweb-dev/wallets@0.2.19", "@thirdweb-dev/wallets@^0.2.19":
   version "0.2.19"
   resolved "https://registry.yarnpkg.com/@thirdweb-dev/wallets/-/wallets-0.2.19.tgz#94c3546c4771385112732695cd426073e2cf50d8"
   integrity sha512-ZOsJq1A0SdqO52xNdNya1OVuAroo2D3UFhCK4eQYte3KvIvm12/C9Khf/9sDGWyAB5FjAAnkRBS+b/LGffVUxw==
@@ -2946,6 +2956,11 @@ convert-source-map@^1.5.0, convert-source-map@^1.7.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.9.0.tgz#7faae62353fb4213366d0ca98358d22e8368b05f"
   integrity sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==
+
+cookie@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
+  integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
 cookiejar@^2.1.1:
   version "2.1.4"
