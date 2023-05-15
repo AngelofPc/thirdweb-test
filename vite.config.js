@@ -28,7 +28,8 @@ export default defineConfig({
     rollupOptions: {
       //   sourcemap: mode === 'development' || 'hidden',
 
-      maxParallelFileOps: Math.max(1, cpus().length - 1),
+      maxParallelFileOps: 2,
+      //   maxParallelFileOps: Math.max(1, cpus().length - 1),
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
