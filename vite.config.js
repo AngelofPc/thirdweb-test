@@ -11,6 +11,7 @@ export default defineConfig({
     nodePolyfills({
       global: true,
     }),
+    sourcemapExclude({ excludeNodeModules: true }),
   ],
   define: {
     'process.env': {},
@@ -25,6 +26,8 @@ export default defineConfig({
     },
 
     rollupOptions: {
+      //   sourcemap: mode === 'development' || 'hidden',
+
       maxParallelFileOps: Math.max(1, cpus().length - 1),
       output: {
         manualChunks: (id) => {
@@ -41,3 +44,18 @@ export default defineConfig({
     },
   },
 });
+
+export function sourcemapExclude(opts) {
+  return {
+    name: 'sourcemap-exclude',
+    transform(code, id) {
+      if (opts?.excludeNodeModules && id.includes('node_modules')) {
+        return {
+          code,
+          // https://github.com/rollup/rollup/blob/master/docs/plugin-development/index.md#source-code-transformations
+          map: { mappings: '' },
+        };
+      }
+    },
+  };
+}
