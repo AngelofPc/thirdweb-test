@@ -1,20 +1,46 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
-import "./styles/globals.css";
+import '@fontsource/inter';
 
-// This is the chain your dApp will work on.
-// Change this to the chain your app is built for.
-// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
-const activeChain = "ethereum";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {
+  ChakraProvider,
+  ColorModeScript,
+  createStandaloneToast,
+} from '@chakra-ui/react';
+import App from './App';
 
-const container = document.getElementById("root");
-const root = createRoot(container!);
-root.render(
-  <React.StrictMode>
-    <ThirdwebProvider activeChain={activeChain}>
+const { ToastContainer, toast } = createStandaloneToast();
+
+import theme from './theme/theme';
+import Fonts from './theme/font';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import './index.css';
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  // <React.StrictMode>
+  <ChakraProvider theme={theme}>
+    {/* <ThirdwebProvider
+      // Required configuration for the provider, but doesn't affect Auth.
+      activeChain="mumbai"
+      authConfig={{
+        // Set this to your domain to prevent phishing attacks
+        domain: 'localhost:1337',
+        // The URL of your Auth API
+        authUrl: 'http://localhost:1337/api/auth'
+      }}
+    >
+  */}
+    <Provider store={store}>
+      <Fonts />
       <App />
-    </ThirdwebProvider>
-  </React.StrictMode>
+      <ToastContainer />
+    </Provider>
+    {/* </ThirdwebProvider> */}
+  </ChakraProvider>
+  // </React.StrictMode>
 );
+
+// "@types/react": "^18.0.26",
+// "@types/react-dom": "^18.0.9",
+// "@vitejs/plugin-react": "^4.0.0",

@@ -1,0 +1,86 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap'); */
+
+#w3a-modal {
+  z-index: inherit !important;
+}
+
+/* * {
+  font-family: 'Inter', sans-serif;
+} */
+
+/* #navLink:hover {
+  color: #ff5500;
+  transition: 0.2s ease-in-out;
+} */
+
+#navLink {
+  color: #ff5500;
+}
+
+.buttonLink {
+  width: 100%;
+}
+
+.customConnectButton {
+  height: 40px !important;
+  /* padding: 4px !important; */
+}
+
+.customConnectButton img {
+  width: 20px !important;
+}
+
+.customConnectButton span {
+  font-size: 12px !important;
+}
+
+.calender Input[type='date']::-webkit-calendar-picker-indicator {
+  background-image: url('./assets/svgs/date-drop.svg');
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+.calender Input[type='date']::-webkit-datetime-edit-text {
+  visibility: hidden;
+  /* flex-wrap: ; */
+}
+
+.calender Input[type='date']::-webkit-datetime-edit-year-field {
+  text-transform: uppercase;
+  /* display: none; */
+}
+
+.calender Input[type='date']::-webkit-datetime-edit-month-field {
+  text-transform: uppercase;
+  /* display: none; */
+}
+
+.calender Input[type='date']::-webkit-datetime-edit-day-field {
+  text-transform: uppercase;
+  /* display: none; */
+}
+
+.overflow::-webkit-scrollbar {
+  display: none;
+}
+
+.web3Btn {
+  border-radius: inherit !important;
+  /* display: none ; */
+  padding: inherit !important;
+  height: inherit !important;
+  width: inherit !important;
+  min-width: inherit !important;
+  min-height: inherit !important;
+  border: transparent !important;
+  outline: transparent !important;
+  background: transparent !important;
+}
+
+.we3Btn:hover,
+.we3Btn:focus {
+  border: none !important;
+  outline: none !important;
+}
