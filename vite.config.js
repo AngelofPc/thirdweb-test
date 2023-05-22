@@ -8,4 +8,13 @@ export default defineConfig({
   define: {
     'process.env': {},
   },
+  resolve: {
+    alias: {
+      //     stream: 'stream-browserify',
+      //     buffer: 'buffer',
+      //     utils: 'utils',
+      //     // process: 'process/browser',
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
 });
